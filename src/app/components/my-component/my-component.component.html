@@ -1,0 +1,16 @@
+<div appMyDirective>
+    <h2>Click me to highlight! </h2>
+</div>
+<ul *ngFor="let user of users">
+    <li>Name: {{ user.name | myPipe }}</li>
+    <li>Email Id: {{ user.email }}</li>
+    <li>Gender: {{ user.gender }}</li>
+    <li>Status: {{ user.status }}</li>
+</ul>
+
+<hr>
+
+<div class="container" *ngFor="let post of posts">
+    <h4>{{ post.title | myPipe}}</h4>
+    {{ post.body }}
+</div>
